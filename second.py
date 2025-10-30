@@ -2,7 +2,7 @@ from random import randint
 
 def get_numbers_ticket(min, max, quantity):
     if min < 1 or max > 1000 or min < quantity > max: # Перевірка на обмеження
-        return "Параметри не відповідають заданим обмеженням"
+        return []
     nums = []
     randomnum = randint(min, max)
     nums.append(randomnum)
@@ -16,4 +16,4 @@ def get_numbers_ticket(min, max, quantity):
     nums.sort() # Сортування списку
     return nums
 
-print("Ваші лотерейні числа:", get_numbers_ticket(1, 10, 5))
+print("Ваші лотерейні числа:", get_numbers_ticket(-10, 10, 5))
